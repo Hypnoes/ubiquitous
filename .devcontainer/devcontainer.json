@@ -1,3 +1,18 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/base:bullseye"
+  "name": "WebGPU Dev Environment",
+  "dockerFile": "Dockerfile",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "PolyMeilex.wgsl",
+        "ms-vscode.live-server"
+      ]
+    },
+    "settings": {
+      "terminal.integrated.shell.linux": "/bin/bash"
+    }
+  },
+  "postCreateCommand": "npm install"
 }
